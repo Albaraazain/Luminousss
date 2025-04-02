@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'EditorialOld';
+    src: url('../fonts/PPEditorialOld-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EditorialOld';
+    src: url('../fonts/PPEditorialOld-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EditorialOld';
+    src: url('../fonts/PPEditorialOld-Ultralight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EditorialOld';
+    src: url('../fonts/PPEditorialOld-UltralightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+.loader {
+    font-family: 'EditorialOld', serif; /* Now using the Editorial Old font */
+    display: flex;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: #000; /* Explicitly set text color to black */
+}
+
+.loader__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transform-origin: top center;
+    transform: scaleY(1);
+    position: relative;
+}
+
+.loader__content {
+    width: 13rem;
+    perspective: 1000px;
+    opacity: 0; /* Initially hidden but GSAP will reveal it */
+}
+
+.loader__text {
+    font-size: 3rem;
+    padding-right: 0.5rem;
+    margin: 0;
+    color: #000; /* Ensure text is black */
+}
+
+.title--editorial {
+    font-family: 'EditorialOld', serif; /* Using Editorial Old font */
+    font-weight: 200; /* Using Regular weight instead of Ultralight */
+    letter-spacing: -0.02em;
+    color: #000; /* Ensure text is black */
+}
+
+.title--editorial--italic {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.loader__text:nth-child(2),
+.loader__text:nth-child(3) {
+    text-align: right;
+}
+
+.loader__number-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.625rem;
+    opacity: 0; /* Initially hidden but GSAP will reveal it */
+}
+
+.loader__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform-origin: right;
+}
+
+.loader__line-inner {
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    transform-origin: left;
+}
+
+.loader__number {
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0;
+    font-family: 'EditorialOld', serif;
+    font-weight: 400;
+}
+
+@media (max-width: 991px) {
+    .loader__content {
+        width: 13rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .loader__content {
+        width: 10.25rem;
+    }
+} 
