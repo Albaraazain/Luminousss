@@ -319,8 +319,8 @@ outline: none;
 		}
 }
 .btn-grey {
-		background: rgba(255, 255, 255, 0.12);
-		color: var(--white);
+color: var(--black);
+background: rgba(255, 255, 255, 0.12);
 }
 .btn-grey:before {
 		background: var(--white);
@@ -592,13 +592,16 @@ html:not(.ready) .mainwrap {
 				opacity: 1;
 		}
 .head-logo {
-		z-index: 101;
-		padding: 5px 0;
+z-index: 101;
+display: flex;
+align-items: center;
+height: var(--header);
+padding: 10px 0;
 }
 .head-logo img {
-		height: calc(var(--header) - 20px);
-		width: auto;
-		display: block;
+height: calc(var(--header) - 20px);
+width: auto;
+display: block;
 }
 		.toggle-menu {
 				display: none;
