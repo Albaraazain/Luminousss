@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -15,7 +15,9 @@
     <meta name="theme-color" content="#000000">
     <link href="static/css/style.css" rel="stylesheet" type="text/css">
     <link href="static/css/startups.css" rel="stylesheet" type="text/css">
-    <link href="static/css/geometric.css" rel="stylesheet" type="text/css"> <!--social start-->
+    <link href="static/css/geometric.css" rel="stylesheet" type="text/css">
+    <link href="static/css/loader.css" rel="stylesheet" type="text/css">
+    <!--social start-->
 
     <!-- this is for  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
@@ -94,6 +96,25 @@
 </head>
 
 <body>
+    <!-- Loader Start -->
+    <div class="loader" style="display: flex; color: #000;">
+        <div class="loader__wrapper">
+            <div class="loader__content" style="opacity: 1;">
+                <p class="loader__text title--editorial">Luminousss</p>
+                <p class="loader__text title--editorial">Digital</p>
+                <p class="loader__text title--editorial title--editorial--italic">Magic</p>
+            </div>
+            <div class="loader__number-wrapper" style="opacity: 1;">
+                <p class="loader__number">0
+                    <div class="loader__line">
+                        <div class="loader__line-inner"></div>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Loader End -->
+    
     <div class="mainwrap" itemscope="" itemtype="https://schema.org/Organization">
         <div class="cursor">
             <div class="cursor-text"></div>
@@ -532,6 +553,8 @@
     <script src="static/js/jquery-3.7.1.min.js"></script>
     <script src="ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="static/js/loader.js"></script>
     <link href="static/css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
     <script src="static/js/swiper-bundle.min.js"></script>
     <!-- Three.js for 3D effects -->
@@ -572,8 +595,7 @@
     		"name": "luminousss.com"
     	}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- GSAP already loaded above - no need to load again -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             gsap.registerPlugin(ScrollTrigger);
