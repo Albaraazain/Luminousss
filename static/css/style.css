@@ -1,4 +1,31 @@
 @charset "utf-8";
+
+/* PP Editorial Old Font Declarations */
+@font-face {
+    font-family: "PPEditorialOld-Regular";
+    src: url("../fonts/PPEditorialOld-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PPEditorialOld-Italic";
+    src: url("../fonts/PPEditorialOld-Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PPEditorialOld-Ultrabold";
+    src: url("../fonts/PPEditorialOld-Ultrabold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Sherika Font Declarations */
 @font-face {
 		font-family: 'Sherika';
 		src: url('../fonts/sherika_regular.woff') format('woff'), url('../fonts/sherika_regular.ttf') format('truetype');
@@ -84,8 +111,9 @@ body {
 		background: var(--black);
 		font: normal 16px var(--font);
 		color: var(--white);
-		-webkit-text-size-adjust: none;
-		display: flex;
+-webkit-text-size-adjust: none;
+text-size-adjust: none;
+display: flex;
 		flex-direction: column;
 		min-height: 100vh;
 		overflow-x: hidden;
@@ -1835,4 +1863,89 @@ html:not(.ready) .cells {
 .header + .content {
     margin-top: 0 !important;
     padding-top: 0 !important;
+}
+
+/* Mobile Hero Section Styles */
+@media only screen and (max-width: 999.99px) {
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - var(--header));
+        min-height: calc(100svh - var(--header));
+        padding: 40px 20px;
+        background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mobile-hero:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(49, 175, 158, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .mobile-hero-content {
+        text-align: center;
+        max-width: 100%;
+        z-index: 1;
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .mobile-hero h1.title--editorial {
+        font-family: "PPEditorialOld-Regular", serif;
+        font-size: clamp(36px, 12vw, 64px);
+        line-height: 1.1;
+        margin: 0 0 10px;
+        color: var(--white);
+    }
+
+    .mobile-hero h2.title--editorial {
+        font-family: "PPEditorialOld-Italic", serif;
+        font-size: clamp(24px, 8vw, 42px);
+        line-height: 1.2;
+        margin: 0 0 20px;
+        color: var(--pink);
+    }
+
+    .mobile-hero .tagline {
+        font-family: var(--font);
+        font-size: clamp(16px, 4.5vw, 21px);
+        line-height: 1.4;
+        margin: 0 0 30px;
+        color: var(--grey);
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobile-hero .btn {
+        margin: 0 auto;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-hero {
+        display: none;
+    }
 }
