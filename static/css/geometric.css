@@ -200,3 +200,102 @@
         font-size: 0.8rem;
     }
 }
+
+/* Add responsive styles for the geometric section */
+@media screen and (max-width: 768px) {
+  .geometric-section {
+    min-height: 100vh;
+  }
+  
+  .geometric-content {
+    padding: 20px;
+  }
+  
+  .geometric-content-inner {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+  
+  .geometric-small-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .geometric-main-title {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .geometric-title-line {
+    margin-bottom: 5px;
+  }
+  
+  .geometric-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  
+  .geometric-tags {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .geometric-tag {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+  
+  .geometric-particles-container {
+    opacity: 0.5; /* Reduce particle density on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .geometric-section {
+    min-height: 90vh;
+  }
+  
+  .geometric-content-inner {
+    padding: 25px 15px;
+  }
+  
+  .geometric-main-title {
+    font-size: 28px;
+  }
+  
+  .geometric-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .geometric-tags {
+    gap: 8px;
+  }
+  
+  .geometric-tag {
+    padding: 6px 12px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .geometric-section {
+    min-height: 120vh; /* Increase height in landscape mode */
+  }
+  
+  .geometric-content-inner {
+    padding: 20px 15px;
+  }
+  
+  .geometric-main-title {
+    font-size: 24px;
+  }
+  
+  .sections-container {
+    overflow: hidden;
+  }
+}
