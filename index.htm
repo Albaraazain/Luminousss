@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+﻿﻿<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -178,8 +178,23 @@
             <div class="startups">
                 <div class="startups-hero">
                     <div class="hero-container">
-                        <!-- Updated Spline Viewer -->
-                        <spline-viewer url="https://prod.spline.design/o-PhWLf4CXzk0dVw/scene.splinecode" class="spline-hero"></spline-viewer>
+                        <!-- Spline Viewer (hidden on mobile) -->
+                        <spline-viewer url="https://prod.spline.design/o-PhWLf4CXzk0dVw/scene.splinecode" 
+                                       class="spline-hero desktop-only"
+                                       loading-anim-type="spinner-small"
+                                       auto-resize="true"
+                                       ambient-light="#ffffff"
+                                       no-shadow></spline-viewer>
+
+                        <!-- Mobile Hero Section -->
+                        <div class="mobile-hero">
+                            <div class="mobile-hero-content">
+                                <h1 class="title--editorial">Luminousss</h1>
+                                <h2 class="title--editorial title--editorial--italic">Digital Magic</h2>
+                                <p class="tagline">Crafting digital excellence for modern brands</p>
+                                <a class="btn btn-white" href="#contact"><span>Start Project</span></a>
+                            </div>
+                        </div>
 
                         <div class="scroll-indicator">
                             <div class="mouse">
@@ -187,15 +202,12 @@
                             </div>
                             <div class="scroll-text">Scroll to explore</div>
                         </div>
-
                         
                         <div class="floating-elements">
                             <div class="float-circle"></div>
                             <div class="float-square"></div>
                             <div class="float-triangle"></div>
                         </div>
-
-                        
                     </div>
                 </div>
                 <!-- end .startups-hero-->
