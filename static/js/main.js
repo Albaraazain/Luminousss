@@ -3,7 +3,7 @@ $('body').append('<div class="screen-resizer" style="pointer-events: none; opaci
 
 // Initialize Lenis with optimized settings
 const lenis = new Lenis({
-  lerp: 0.07,
+  lerp: 0.10,
   smoothWheel: true,
   wheelMultiplier: 1,
   autoRaf: true
