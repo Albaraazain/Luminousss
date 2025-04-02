@@ -1,7 +1,7 @@
 /* Section Transitions */
 .sections-container {
     position: relative;
-    top: -100px
+    top: -100px;
 }
 
 .section-transition-overlay {
