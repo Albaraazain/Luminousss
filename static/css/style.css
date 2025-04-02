@@ -76,17 +76,19 @@ html, body {
 		text-rendering: optimizeLegibility !important;
 		-webkit-font-smoothing: antialiased;
 		font-optical-sizing: auto;
+		margin: 0 !important;
+		padding: 0 !important;
 		/* scroll-behavior: smooth; */
 }
 body {
-		margin: 0;
-		padding: 0;
 		background: var(--black);
 		font: normal 16px var(--font);
 		color: var(--white);
 		-webkit-text-size-adjust: none;
 		display: flex;
 		flex-direction: column;
+		min-height: 100vh;
+		overflow-x: hidden;
 }
 *, *:before, *:after {
 		box-sizing: border-box;
@@ -488,6 +490,8 @@ html:not(.ready) .mainwrap {
 }
 .content {
 		flex: 1 0 auto;
+		margin-top: 0;
+		padding-top: 0;
 }
 .header, .footer {
 		flex: 0 0 auto;
@@ -594,7 +598,6 @@ html:not(.ready) .mainwrap {
 				background: #23222280;
 				border-radius: calc(var(--header) / 2);
 				padding: 10px 20px;
-				margin: 10px 0;
 				box-sizing: border-box;
 				align-items: flex-start;
 				flex-wrap: wrap;
@@ -1826,4 +1829,10 @@ html:not(.ready) .cells {
 
 .header-dark .btn-white:hover {
 		background: rgba(0, 0, 0, 0.15);
+}
+
+/* Add this rule after the .header and .content rules */
+.header + .content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
