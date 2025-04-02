@@ -62,37 +62,44 @@
 		font-display: swap;
 }
 :root {
-		font-size: 0.833333vw;
-		--black: #000;
-		--white: #fff;
-		--white0: #ffffff00;
-		--grey: #B9B9C7;
-		--dark: #141414;
-		--bg-grey: #F5F5F5;
-		--bg-grey0: #F5F5F500;
-		--side-padding: clamp(20px, 3.75rem, 60px);
-		--vert-padding: clamp(80px, 12.5rem, 200px);
-		--distance: clamp(80px, 12.5rem, 200px);
-		--header: 92px;
-		--font: Sherika, -apple-system, system-ui, "sans-serif";
-		--delay: 0.1s;
-		--delay2: 0s;
-		--pink: #31af9e; /* Changed from #27b0e6 to a new color */
-		--yellow: #ffd563; /* Changed from #FBFF3E to a new color */
-		--block: #141414;
-		--percent: 0;
-		--telegram: #1DA1F2; /* Changed from #32B6F8 to a new color */
-		--whatsapp: #25D366; /* Changed from #43D56C to a new color */
-		--h: 9;
-		--v: 5;
-		--red: #f00;
+font-size: 0.833333vw;
+--black: #000;
+--white: #fff;
+--white0: #ffffff00;
+--grey: #B9B9C7;
+--dark: #141414;
+--bg-grey: #F5F5F5;
+--bg-grey0: #F5F5F500;
+--side-padding: clamp(20px, 3.75rem, 60px);
+--vert-padding: clamp(80px, 12.5rem, 200px);
+--distance: clamp(80px, 12.5rem, 200px);
+--header: 92px;
+--font: Sherika, -apple-system, system-ui, "sans-serif";
+--delay: 0.1s;
+--delay2: 0s;
+--pink: #31af9e; /* Changed from #27b0e6 to a new color */
+--yellow: #ffd563; /* Changed from #FBFF3E to a new color */
+--block: #141414;
+--percent: 0;
+--telegram: #1DA1F2; /* Changed from #32B6F8 to a new color */
+--whatsapp: #25D366; /* Changed from #43D56C to a new color */
+--h: 9;
+--v: 5;
+--red: #f00;
+
+/* Breakpoint System */
+--breakpoint-sm: 480px;  /* Large Mobile */
+--breakpoint-md: 768px;  /* Tablet */
+--breakpoint-lg: 1024px; /* Desktop */
+--breakpoint-xl: 1440px; /* Large Desktop */
+--breakpoint-2xl: 1920px; /* Extra Large Desktop */
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
 		:root {
 				--header: 110px;
 		}
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1920px) { /* Extra Large Desktop */
 		:root {
 				--side-padding: calc((100vw - 1800px) / 2);
 		}
@@ -622,7 +629,7 @@ display: block;
 				margin-left: auto;
 		}
 }
-@media only screen and (max-width: 999.99px) {
+@media only screen and (max-width: 1023px) {
 .header {
 height: var(--header);
 border-radius: calc(var(--header) / 2);
@@ -1310,7 +1317,7 @@ html:not(.scrolled-screen) .subscr-cover-link .btn {
 		mix-blend-mode: lighten;
 		margin: 0;
 }
-@media only screen and (max-width: 599.99px) {
+@media only screen and (max-width: 479px) {
 		.foot-contacts .mini-title {
 				display: none;
 		}
